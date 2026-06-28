@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P3 Image Enhancer - Home</title>
+    <link rel="stylesheet" href="style.css"><!-- link tag to use as reference of css file-->
+</head>
+<body>
+
+<header> <!-- it is use for top part of web page, (logo,home,editor,about)-->
+    <div class="logo">P<span>3</span></div>
+    <nav><!-- this is nav tag to use display menu on the top part-->
+        <a href="index.html">Home</a>
+        <a href="enhance.html">Editor</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<!-- Slideshow -->
+<div class="slideshow"> <!-- container tag to contain values-->
+    <img src="https://picsum.photos/1200/500?random=1" class="slide active"> <!-- picsum.photos.-->
+    <img src="https://picsum.photos/1200/500?random=2" class="slide">
+    <img src="https://picsum.photos/1200/500?random=3" class="slide">
+</div>
+
+<section class="hero-text"> <!-- main hear part which use to go to next editor page-->
+    <h1>Enhance Your Images with P3 Editor</h1>
+    <p>Upload → Apply Effects → Download. Fully manual JS, HTML & CSS.</p>
+    <a class="btn" href="enhance.html">Start Editing</a>
+</section>
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => { // buit in method of js to set break at ml sec
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 3000);
+</script>
+
+</body>
+</html>

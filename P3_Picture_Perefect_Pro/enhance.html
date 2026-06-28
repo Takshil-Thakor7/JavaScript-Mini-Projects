@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P3 Image Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">P<span>3</span></div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="enhance.html">Editor</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<div class="editor-container">
+
+    <input type="file" id="upload" accept="image/*" class="upload-btn">
+
+    <canvas id="canvas"></canvas>
+
+    <div class="controls">
+        <label>Brightness</label>
+        <input type="range" id="brightness" min="0" max="200" value="100">
+
+        <label>Blur</label>
+        <input type="range" id="blur" min="0" max="10" value="0">
+
+        <label>Sharpness (Contrast)</label>
+        <input type="range" id="sharpness" min="50" max="200" value="100">
+
+        <label>Blue Effect</label>
+        <input type="range" id="blue" min="0" max="200" value="100">
+
+        <label>Grayscale</label>
+        <input type="range" id="gray" min="0" max="100" value="0">
+
+        <button id="downloadBtn" class="btn">Download Image</button>
+    </div>
+
+</div>
+
+<script src="P3.js"></script> <!-- to fetch js code from js file-->
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+
+
+
+/* ---------- GLOBAL ---------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    overflow-x: hidden;
+}
+
+header {
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff;
+}
+.logo span {
+    color: #ff4081;
+    text-shadow: 0 0 10px #ff4081;
+}
+
+/* Nav */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+/* ---------- SLIDESHOW ---------- */
+.slideshow {
+    width: 100%;
+    height: 60vh;
+    max-height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    object-fit: cover;
+    transition: opacity 1.5s;
+}
+.slide.active {
+    opacity: 1;
+}
+
+/* ---------- HERO TEXT ---------- */
+.hero-text {
+    text-align: center;
+    padding: 40px 20px;
+}
+.hero-text h1 {
+    font-size: 40px;
+}
+.hero-text p {
+    font-size: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #ff5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ---------- EDITOR PAGE ---------- */
+.editor-container {
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+canvas {
+    width: 100%;
+    max-width: 700px;
+    border: 2px solid #222;
+    background: white;
+}
+
+.controls {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 15px;
+}
+
+/* ---------- ABOUT PAGE ---------- */
+.content {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.content a {
+    color: #2196f3;
+}
+
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
+
+/* Tablets */
+@media(max-width: 768px) {
+    nav {
+        text-align: center;
+        width: 100%;
+    }
+
+    .controls {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+}
+
+/* Mobile */
+@media(max-width: 520px) {
+    .hero-text h1 {
+        font-size: 28px;
+    }
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+}
